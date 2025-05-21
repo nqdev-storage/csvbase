@@ -5,7 +5,8 @@ version :=$(file < csvbase/VERSION)
 
 .PHONY: tox serve serve-gunicorn release default static-deps
 
-default: tox
+# default: tox
+default: static-deps
 
 static-deps: csvbase/web/static/codehilite.css csvbase/web/static/codehilite-dark.css csvbase/web/static/bootstrap.min.css csvbase/web/static/bootstrap.bundle.js tests/test-data/sitemap.xsd 
 
