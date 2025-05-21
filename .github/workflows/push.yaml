@@ -11,6 +11,12 @@
 
 name: Push docker image to ghcr.io
 
+on:
+  workflow_dispatch: # Cho phép chạy thủ công
+
+# Remove all permissions by default
+permissions: write-all
+
 jobs:
   push:
     runs-on: ubuntu-latest
